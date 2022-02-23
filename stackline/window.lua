@@ -65,7 +65,7 @@ function Window:setupIndicator() -- {{{
     self.indicator_rect = {
         x = xval,
         y = self.frame.y + c.offset.y +
-            ((self.stackIdx - 1) * c.size * c.vertSpacing),
+            (((self.stackIdx or 0) - 1) * c.size * c.vertSpacing),
         w = self.width,
         h = c.size,
     }
